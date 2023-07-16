@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .red-bg {
+        background: linear-gradient(180deg, #D2333E 0%, #F54B55 100%);
+    }
+}
+
+@layer components {
+    .toast {
+        animation-fill-mode: forwards;
+        animation-duration: 0.2s;
+        @apply items-center justify-between border rounded-2xl bg-white shadow-md cursor-pointer 
+        p-4 w-full max-w-xs absolute top-10 left-[50%] -translate-x-[50%] select-none hidden
+    }
+
+    @keyframes slideIn {
+        from { @apply -top-5 opacity-0 }
+        to { @apply top-10 opacity-100 }
+    }
+
+    @keyframes slideOut {
+        from { @apply top-10 opacity-100 }
+        to { @apply -top-10 opacity-0 }
+    }
+
+    .toast.show {
+        animation-name: slideIn;
+        @apply flex
+    }
+
+    .toast.hide {
+        animation-name: slideOut;
+        @apply flex
+    }
+}

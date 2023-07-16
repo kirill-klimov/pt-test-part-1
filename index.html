@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProgressTerra - часть 1 Тестовое задание</title>
+    <link rel="stylesheet" href="/index.css">
+    <script defer type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <div class="flex justify-between p-4 mb-10">
+      <span>ЛОГОТИП</span>
+      <img class="cursor-pointer" src="info.svg" alt="info">
+    </div>
+    <div class="red-bg h-32"></div>
+
+    <div id="toast" class="toast">
+      <div>
+        <span class="text-xl font-bold block mb-2"><span id="amount"></span> бонусов</span>
+        <div class="flex text-sm text-gray-500">
+          <span><span id="date"></span> сгорит</span>
+          <img class="mx-1" src="fire.svg" alt="fire">
+          <span><span id="to_burn"></span> бонусов</span>
+        </div>
+      </div>
+      <div class="cursor-pointer">
+        <img src="toast-button.svg" alt="toast-button">
+      </div>
+    </div>
+  </body>
+</html>
